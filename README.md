@@ -1,45 +1,34 @@
-# Crop Nutrition Management
+# Soil Nutrient Balance Advisor
 
-This project presents a machine learning-based system for analyzing crop nutrition data and supporting data-driven decisions related to crop productivity, fertilization, and irrigation management.
+This project presents a machine learning system designed to analyze soil nutrient and moisture conditions and estimate their impact on crop productivity.
 
-The model uses nutrient content, moisture, and yield-related measurements to identify relationships between crop conditions and productivity.
+The system provides data-driven insights that can support better nutrient management and agricultural planning.
 
 ## Dataset
 
-The dataset contains agricultural measurements related to crop nutrition and productivity, including:
+The project uses agricultural data containing:
 
-* **Available Nitrogen (AvN%)**
-* **Available Moisture (AvMoisture%)**
-* **Average Yield Unit Weight (AvYieldUnitWeight (lb))**
+* Nitrogen (N)
+* Phosphorus (P)
+* Potassium (K)
+* Soil Moisture
 
-The yield unit weight is used as the target variable for the model.
+The target variable represents estimated crop productivity.
 
 ## Model
 
-A **Random Forest Regressor** is used to model the relationship between nutrient and moisture conditions and crop yield.
+A **Random Forest Regressor** is used to estimate crop productivity based on soil nutrient levels and moisture conditions.
 
-The preprocessing pipeline includes:
-
-* Converting numerical features and target values to the appropriate numeric format.
-* Handling missing values using column mean imputation.
-* Standardizing the input features.
-* Training the model using the processed agricultural data.
+The model identifies relationships between nutrient availability, soil moisture, and expected productivity.
 
 ## Performance
 
-The model achieved a Mean Squared Error (MSE) of approximately:
+The reconstructed prototype achieved approximately:
 
-**17.68**
+* **R² Score:** 0.98
+* **Mean Squared Error:** 31.92
 
-This provides a baseline for evaluating the relationship between crop nutrition conditions and yield.
-
-## Model Output
-
-The trained model is saved as:
-
-`nutrient_management_model.pkl`
-
-The saved model can be reused for future predictions and further agricultural analysis.
+These results were obtained using the reconstructed prototype dataset.
 
 ## Development Tools
 
@@ -52,4 +41,4 @@ Machine Learning
 
 ## Future Development
 
-Future improvements may include incorporating additional soil, nutrient, irrigation, and environmental features to support more accurate crop nutrition and productivity management.
+Future improvements may include integrating additional soil properties, fertilizer information, irrigation data, and crop-specific nutrient requirements to provide more detailed nutrient management recommendations.
